@@ -30,7 +30,7 @@ namespace SimpleTODO.Server.Services
 
             ArgumentNullException.ThrowIfNull(modelToUpdate);
 
-            modelToUpdate.Header = model.Text;
+            modelToUpdate.Header = model.Header;
             modelToUpdate.Text = model.Text;
 
             return modelToUpdate;
@@ -58,6 +58,5 @@ namespace SimpleTODO.Server.Services
         {
             return this._dataContext.Posts;
         }
-
     }
 }
